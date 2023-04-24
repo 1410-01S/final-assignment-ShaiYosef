@@ -1,0 +1,7 @@
+
+static Random generator = new generator();
+
+static <T> T pickRandom(T[] array){
+	int rnd = generation,nextInt(array.length);
+	return array[rnd];
+}
