@@ -1,4 +1,9 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.Random;
+import java.util.Scanner;
+
+import javax.print.attribute.standard.QueuedJobCount;
 
 public class Final {
    
@@ -61,9 +66,28 @@ public class Final {
 
         generator = new Random();
 
+        Scanner s = null;
+
+        try{
+
+            s = new Scanner(new BufferedReader(new FileReader("names.txt")));
+            s.useLocale(Locale.US);
+            s.useDelimiter(pattern:",\\s*");
+
+            
+
+        } finally{
+            s.close();
+        }
+
+
+
         Player player = new Player();
 
         System.out.println(player.strength);
+
+
+
 
     }
 
